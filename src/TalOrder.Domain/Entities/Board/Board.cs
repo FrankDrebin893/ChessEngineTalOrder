@@ -3,18 +3,22 @@ using System.Collections.Generic;
 
 namespace TalOrder.Domain.Entities.Board
 {
-    public abstract class Board : IBoard
+    public class Board : IBoard
     {
+        private readonly Position _position;
+
+        public Board(Position startPosition) {
+            _position = startPosition;
+        }
+
         public void MakeMove(Move move)
         {
             throw new NotImplementedException();
         }
 
-        protected IEnumerable<Move> GetLegalMoves()
+        public IEnumerable<Move> GetLegalMoves()
         {
             throw new NotImplementedException();
         }
-
-        protected 
     }
 }

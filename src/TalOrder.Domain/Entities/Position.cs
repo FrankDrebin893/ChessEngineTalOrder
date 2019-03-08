@@ -54,5 +54,13 @@ namespace TalOrder.Domain.Entities
 
             return squares;
         }
+
+        public IEnumerable<Move> GetLegalMoves() {
+            for (var i = 0; i <= Squares.Length; i++) {
+                for (var j = 0; j <= Squares.Length; j++) {
+                    
+                }
+            }
+        }
     }
 }
